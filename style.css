@@ -3,12 +3,17 @@ body{
 }
 
 header{
-    
+    margin:0;
+}
+
+#start{
+    justify-content: center;
 }
 header h1{
     text-align: center;
     color: rgb(181, 181, 250);
     font-weight: 800;
+    size: 70px;
 }
 
 .beat-visual{
@@ -26,6 +31,7 @@ header h1{
 .beats button{
     width: 70px;
     height: 70px;
+    background-color: rgb(235, 235, 237);
 }
 
 .box{
