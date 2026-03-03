@@ -1,13 +1,18 @@
 const strongClick= new Audio("./assets/universfield-crash-cymbal-hit-140577.mp3")
 const weakClick= new Audio("./assets/weak-click.mp3")
 let currentBeat=1;
-const beatsPerBar=4;
+let beatsPerBar=1;
 let metronomeInterval=null;
 let isRunning=false;
 
-function setBeat(){
-    
-}
+const beatContainer = document.querySelector(".beats");
+beatContainer.addEventListener("click", (event) =>{
+    if (event.target.tagName == "BUTTON"){
+        const selectedNum = Number(event.target.textContent);
+        beatsPerBar= selectedNum;
+    }
+
+} );
 function beatSound(){
     console.log("beat: ", currentBeat); 
     if (currentBeat==1){
