@@ -1,3 +1,9 @@
+.press-start-2p-regular {
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
 body{
     background-color: rgb(34, 32, 32);
 }
@@ -6,14 +12,13 @@ header{
     margin:0;
 }
 
-#start{
-    justify-content: center;
-}
 header h1{
     text-align: center;
     color: rgb(181, 181, 250);
     font-weight: 800;
-    size: 70px;
+    size: 100px;
+    font-family: "Press Start 2P", system-ui;
+    padding: 0%;
 }
 
 .beat-visual{
@@ -41,3 +46,4 @@ header h1{
     background-color: white;
 
 }
+

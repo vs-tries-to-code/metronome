@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Metronome</title>
     <link href="./style.css" rel="stylesheet"/>
-    <script src="./script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -13,7 +15,7 @@
     </header>
     <div class="metronome">
     <div class="beat-visual">
-        <div class="box"></div>
+        <div id="beat1" class="box"></div>
         <div class="box"></div>
         <div class="box"></div>
         <div class="box"></div>
@@ -25,29 +27,25 @@
         
     </div>
     <div id="start-button">
-        <button onclick="beatSound()">START</button>
+        <button id="toggleBtn"><h2>START</h2></button>
     </div>
     
     <div class="beats">
-        <button>1</button>
-        <button>2</button>
-        <button>3</button>
-        <button>4</button>
-        <button>5</button>
-        <button>6</button>
-        <button>7</button>
-        <button>8</button>
-        <button>9</button>
-        <button>10</button>
-        <button>11</button>
-        <button>12</button>
+        <button id="1">1</button>
+        <button id="2">2</button>
+        <button id="3">3</button>
+        <button id="4">4</button>
+        <button id="5">5</button>
+        <button id="6">6</button>
+        <button id="7">7</button>
+        <button id="8">8</button>
+        <button id="9">9</button>
+        <button id="10">10</button>
+        <button id="11">11</button>
+        <button id="12">12</button>
     </div>
-    
-
-    
     </div>
-    
-
 
 </body>
+<script src="./script.js" rel="script"></script>
 </html>
