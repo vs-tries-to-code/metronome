@@ -1,3 +1,5 @@
+
+
 .press-start-2p-regular {
   font-family: "Press Start 2P", system-ui;
   font-weight: 400;
@@ -5,20 +7,20 @@
 }
 
 body{
-    background-color: rgb(34, 32, 32);
+    background: radial-gradient(#000000, #2d2d2d);
 }
 
 header{
-    margin:0;
+    margin: 0px;
 }
 
 header h1{
     text-align: center;
-    color: rgb(181, 181, 250);
+    color: #2CFF05;
     font-weight: 800;
-    size: 100px;
     font-family: "Press Start 2P", system-ui;
-    padding: 0%;
+    padding: 100px;
+    size: 100px;
 }
 
 .beat-visual{
@@ -30,20 +32,42 @@ header h1{
 .beats{
     justify-content: center;
     display: flex;
-    gap: 10px;
+    gap: 30px;
+    box-shadow: white;
 }
 
 .beats button{
     width: 70px;
     height: 70px;
-    background-color: rgb(235, 235, 237);
+    background: radial-gradient(#a7ff9c, #2CFF05);
+    border-radius: 1rem;
 }
 
-.box{
+.beats button:hover{
+    background: radial-gradient(#bf00bf, #ffe3ff)
+}
+
+ .box{
     height: 50px;
     width: 50px;
+    border-radius: 50px;
     border: 1px solid black;
-    background-color: white;
+    background: linear-gradient(#2CFF05,#0c4601)
 
+}
+
+.tempo-input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+
+}
+
+#start-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
 }
 
