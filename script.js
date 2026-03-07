@@ -4,6 +4,7 @@ let currentBeat=1;
 let beatsPerBar=1;
 let metronomeInterval=null;
 let isRunning=false;
+let bpm=Number(document.getElementById("bpm").value);
 
 const beatContainer = document.querySelector(".beats");
 beatContainer.addEventListener("click", (event) =>{
@@ -13,6 +14,7 @@ beatContainer.addEventListener("click", (event) =>{
     }
 
 } );
+
 function beatSound(){
     console.log("beat: ", currentBeat); 
     if (currentBeat==1){
@@ -34,7 +36,7 @@ function beatSound(){
 
 
 function startMetronome(){
-    const bpm=Number(document.getElementById("bpm").value);
+    
     if (bpm<=0){
         alert("Enter a BPM greater than zero");
         return;
@@ -52,15 +54,37 @@ function stopMetronome(){
 
 const toggleBtn = document.getElementById("toggleBtn");
 toggleBtn.addEventListener("click", () => {
+    const h2 = toggleBtn.querySelector("h2");
     if (isRunning==false){
-        toggleBtn.textContent = "STOP";
+        h2.textContent = "⏹ STOP";
         isRunning=true;
         startMetronome();
     }
     else{
-        toggleBtn.textContent = "START";
+        h2.textContent = "▶ START";
         isRunning=false;
         stopMetronome();
     }
 });
+
+const increaseTempo = document.getElementById("increase");
+const decreaseTempo = document.getElementById("decrease");
+const bpmInput = document.getElementById("bpm");
+
+increaseTempo.addEventListener("click", () => {
+    bpm = Number(bpmInput.value);
+    bpm += 1;
+    bpmInput.value = bpm;
+});
+
+decreaseTempo.addEventListener("click", () => {
+    bpm = Number(bpmInput.value);
+    if (bpm > 0) {
+        bpm -= 1;
+        bpmInput.value = bpm;
+    }
+});
+
+
+
 

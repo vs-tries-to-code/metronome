@@ -21,6 +21,7 @@ header h1{
     font-family: "Press Start 2P", system-ui;
     padding: 100px;
     size: 100px;
+    text-shadow: 1px 1px 5px rgba(195, 255, 187, 0.838)
 }
 
 .beat-visual{
@@ -34,17 +35,48 @@ header h1{
     display: flex;
     gap: 30px;
     box-shadow: white;
+    perspective: 1000px;
 }
 
 .beats button{
     width: 70px;
     height: 70px;
-    background: radial-gradient(#a7ff9c, #2CFF05);
-    border-radius: 1rem;
+    border: 2px solid #39ff14;
+    border-radius: 12px;
+    background: #2d2d2d;
+    color: white;
+
+    box-shadow:
+        0 0 5px #39ff14,
+        0 0 15px #39ff14,
+        0 0 30px #39ff14;
+    transition: transform 0.3s ease-out, background 0.3s ease-out;
+
+    
 }
 
+.beats button h4{
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+}
+
+@keyframes scaleUp {
+    from{
+        transform: scale(1) translateZ(0px);
+    }
+
+    to{
+        transform: scale(1.15) translateZ(20px);
+    }
+}
+
+
 .beats button:hover{
-    background: radial-gradient(#bf00bf, #ffe3ff)
+    background: radial-gradient(#bf00ff, #ffe3ff);
+    cursor: pointer;
+    animation: scaleUp 0.3s ease-out forwards;
 }
 
  .box{
@@ -52,7 +84,7 @@ header h1{
     width: 50px;
     border-radius: 50px;
     border: 1px solid black;
-    background: linear-gradient(#2CFF05,#0c4601)
+    background: radial-gradient(#2CFF05, #a7ff9c)
 
 }
 
@@ -61,7 +93,7 @@ header h1{
     justify-content: center;
     align-items: center;
     padding: 30px;
-
+    gap: 5px;
 }
 
 #start-button{
@@ -69,5 +101,53 @@ header h1{
     justify-content: center;
     align-items: center;
     padding: 30px;
+    border-radius: 10px;
 }
+
+.instruction{
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: medium;
+  text-align: center;
+  padding: 50px;
+}
+
+.instruction h3{
+    color:#2CFF05;
+}
+
+.instruction h5{
+    color: #bf00ff;
+}
+
+.metronome{
+    background-color: #2d2d2d;
+    border-radius: 20px;
+    margin: auto;
+    max-width: 1200px;
+    padding: 60px;
+    box-shadow: rgba(230, 230, 234, 0.678) 0px 7px 29px 0px;
+}
+
+#increase{
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+}
+#decrease{
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+}
+#bpm{
+    height: 50px;
+    width: 80px;
+}
+
+
+
+
+
+
 
