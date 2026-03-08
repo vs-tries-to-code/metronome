@@ -19,7 +19,7 @@ header h1{
     color: #2CFF05;
     font-weight: 800;
     font-family: "Press Start 2P", system-ui;
-    padding: 100px;
+    padding: 50px;
     size: 100px;
     text-shadow: 1px 1px 5px rgba(195, 255, 187, 0.838)
 }
@@ -74,12 +74,18 @@ header h1{
 
 
 .beats button:hover{
-    background: radial-gradient(#bf00ff, #ffe3ff);
+    background: #2d2d2d;
     cursor: pointer;
+    border: 2px solid #bf00ff;
+    box-shadow:
+        0 0 5px #bf00ff,
+        0 0 15px #bf00bf,
+        0 0 30px #bf00ff;
+
     animation: scaleUp 0.3s ease-out forwards;
 }
 
- .box{
+.box{
     height: 50px;
     width: 50px;
     border-radius: 50px;
@@ -88,7 +94,32 @@ header h1{
 
 }
 
-.tempo-input{
+.box.pulse {
+    animation: pulse 0.3s ease-in-out;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+.tempo-input h5{
+    text-align: center;
+    color:#2CFF05;
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.tempo-input h6{
+    text-align: center;
+    color:#bf00ff;
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+.tempo-control{
     display: flex;
     justify-content: center;
     align-items: center;
