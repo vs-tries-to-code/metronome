@@ -39,6 +39,7 @@ header h1{
     display: flex;
     gap: 20px;
     justify-content: center;
+    padding: 3rem;
 }
 
 .beats{
@@ -94,7 +95,7 @@ header h1{
     width: 50px;
     border-radius: 50px;
     border: 1px solid #626161;
-    background: #626161;
+    background: #2d2d2d;
 
 }
 
@@ -103,9 +104,12 @@ header h1{
 }
 
 @keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.5); }
-    100% { transform: scale(1); }
+    0% { transform: scale(1);
+    background-color: #2d2d2d; }
+    50% { transform: scale(1.5);
+    background-color: #2CFF05; }
+    100% { transform: scale(1); 
+    background-color: #2d2d2d;}
 }
 
 .tempo-input h5{
@@ -222,7 +226,7 @@ header h1{
     font-size: 0.8rem;
     letter-spacing: 4px;
     margin-bottom: 25px;
-    font-family: monospace;
+    font-family: "Press ";
     font-weight: bold;
 }
 
